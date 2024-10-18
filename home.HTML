@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("NOTES2.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Main content styling */
+.search-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.search-box h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.search-box form {
+    display: inline-block;
+    position: relative;
+}
+
+.search-box input {
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    font-size: 1.2rem;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-box button img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-box a{
+        background-color: #9d9696;
+        width: 150px;
+        margin-top: 2cqb;
+        text-decoration: underline;
+        text-decoration-color: rgb(189, 192, 192);
+        font-style: italic;
+        text-align: center;
+        margin-left: 25px;
+    }
+
+    .search-box a:hover{
+        background-color: #0f1010;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a style= "display: flexbox;" class="navbar-brand" href="#" onclick="NHUB()">CodeDecode</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="results"></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+              </nav>  
+        </header>
+        <main>
+            <div class="search-box">
+
+                <form>
+                    <input style="margin-top: 24cqb;" id="search" type="text" placeholder="Search...."><br>
+                    <a style="color: #f2f1fb;"  href="#" class="btn" onclick="BTECH()">BTECH</a>
+                    <a  style="color: #f2f1fb;"href="#" class="btn" onclick="BBA()">BBA</a>
+                     <a  style="color: #f2f1fb;" href="#" class="btn" onclick="other()">OTHERS</a>
+             </form>
+            </div>
+            <h2 style="color: aqua;">Upload a File</h2>
+    <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="uploaded_file">
+        <button type="submit">Upload</button>
+    </form>
+    
+            
+
+    <!--Javascript-->
+<script>
+    function notes(){
+        var x = document.getElementById("search").value;
+        const url = "https://drive.google.com/drive/folders/1BoGOhaVvhAPJHSI-Jr6xT9R9pra6kErv/";
+        var url1 = url
+        var win = window.open(url, '_blank');
+        win.focus;
+    }
+    
+    function BTECH(){
+        var x = document.getElementById("search").value;
+        const url = "https://drive.google.com/drive/folders/10MnGnpUjY3MJNFH1nfssnb4Al_Z4GWto";
+        var url1 = url + x
+        var win = window.open(url1, '_blank');
+        win.focus;
+    }
+
+    function BBA(){
+        var x = document.getElementById("search").value;
+        const url = "https://drive.google.com/drive/folders/1iau-9ln0K7D5alpdaOajg0p6uLwbKt1b";
+        var url1 = url + x
+        var win = window.open(url1, '_blank');
+        win.focus;
+    }
+
+    function other(){
+        var x = document.getElementById("search").value;
+        const url = " https://drive.google.com/drive/folders/1ZP_X6AFX0dwv-5wm6qL_g_NSiYcL6F2O";
+        var url1 = url + x
+        var win = window.open(url1, '_blank');
+        win.focus;
+    }
+
+    function NHUB(){
+        const url = "http://127.0.0.1:5500/DESCRIPTION.HTML";
+        var url1 = url
+        var win = window.open(url1, '_blank');
+        win.focus;
+    }
+
+</script>
+</body>
+</html>
